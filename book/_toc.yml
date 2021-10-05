@@ -1,5 +1,8 @@
 format: jb-book
 root: intro
-chapters:
-- file: labs/zasady
+
+parts:
+  - caption: Laboratoria
+    chapters:
+        - file: labs/zasady
 
