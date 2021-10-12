@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorium 2 &#8212; Przetwarzanie danych masowych</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Zasady laboratorium" href="zasady.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Przetwarzanie danych masowych</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Przetwarzanie danych masowych
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Laboratoria
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="zasady.html">
+   Zasady laboratorium
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Laboratorium 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/labs/lab2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pwr-ai/przetwarzanie-danych-masowych/master?urlpath=tree/docs/labs/lab2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#podstawy-wykorzystania-infrastruktury-chmurowej-unix-shell">
+   Podstawy wykorzystania infrastruktury chmurowej - Unix, Shell
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#powloka-bash">
+   1. Powłoka Bash
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zadanie-1-1-1-pkt">
+   Zadanie 1.1 (1 pkt)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zadanie-1-2-1-pkt">
+   Zadanie 1.2 (1 pkt)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zadanie-1-3-1-pkt">
+   Zadanie 1.3 (1 pkt)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polaczenia-ssh">
+   2. Połączenia SSH
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zadanie-2-1-2-pkt">
+   Zadanie 2.1 (2 pkt)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#edytory-tekstowe">
+   3. Edytory tekstowe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zadanie-3-1-1-pkt">
+   Zadanie 3.1 (1 pkt)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="laboratorium-2">
+<h1>Laboratorium 2<a class="headerlink" href="#laboratorium-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="podstawy-wykorzystania-infrastruktury-chmurowej-unix-shell">
+<h2>Podstawy wykorzystania infrastruktury chmurowej - Unix, Shell<a class="headerlink" href="#podstawy-wykorzystania-infrastruktury-chmurowej-unix-shell" title="Permalink to this headline">¶</a></h2>
+<p>W trakcie zajęć laboratoryjnych będziemy pracować z różnymi narzędziami stosowanymi przy przetwarzaniu danych masowych. Wykorzystamy je, aby krok po kroku zbudować rozproszoną aplikację do zbierania i przetwarzania większych wolumenów danych, pochodzących z różnych źródeł. Będziemy również wdrażać tę aplikację na produkcyjnym środowisku.</p>
+<p>Zarówno na etapie rozwoju aplikacji, jak i jej późniejszego wdrożenia będziemy korzystać z usług chmurowych, a dokładniej z maszyn wirtualnych. Taki tryb pracy wymaga zapoznania się z podstawowymi mechanizmami w systemie Linux, który będzie używany na serwerach (maszynach wirtualnych). Jednymi z pierwszych aspektów, które poruszymy na tym laboratorium, jest obsługa powłoki (shell) Bash oraz praca z edytorami tekstowymi (tutaj: Vim).</p>
+</div>
+<div class="section" id="powloka-bash">
+<h2>1. Powłoka Bash<a class="headerlink" href="#powloka-bash" title="Permalink to this headline">¶</a></h2>
+<p>Najczęściej spotykaną powłoką w systemach z rodziny GNU/Linux jest <strong>Bash</strong> (ang. <em>Bourne-Again Shell</em>). Dostarcza ona wiele komend pozwalających na przeprowadzanie podstawowych operacji oraz interakcję z systemem (np. <span class="math notranslate nohighlight">\(\texttt{cd}, \texttt{pwd}, \texttt{echo}\)</span>).</p>
+<p>Komendy można łączyć w większe programy, zwane w Bashu skryptami. Skrypty mają najczęściej rozszerzenie <span class="math notranslate nohighlight">\(\texttt{.sh}\)</span>, ale jest to konwencja a nie wymaganie. Bash pozwoli uruchomić skrypt w pliku nie posiadającym żadnego rozszerzenia. Skrypty można uruchamiać na <a class="reference external" href="http://m.in">m.in</a>. dwa sposoby:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">plik.sh</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">./plik.sh</span></code></p></li>
+</ul>
+<p>W drugim przypadku wymagane jest dopisanie w pierwszej linii skryptu informacji jak uruchomić taki skrypt, tzw. <em>shebang</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+</pre></div>
+</div>
+<p>lub</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+</pre></div>
+</div>
+<p>Przy uruchamianiu skryptów za pomocą komendy <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">plik.sh</span></code> nie jest to wymagane, ale dopisywanie shebanga stanowi dobrą praktykę.</p>
+<p>Więcej szczegółowych informacji na temat Basha można znaleźć w jego oficjalnej dokumentacji: <a class="reference external" href="https://www.gnu.org/software/bash/manual/bash.html">https://www.gnu.org/software/bash/manual/bash.html</a></p>
+</div>
+<div class="section" id="zadanie-1-1-1-pkt">
+<h2>Zadanie 1.1 (1 pkt)<a class="headerlink" href="#zadanie-1-1-1-pkt" title="Permalink to this headline">¶</a></h2>
+<p>Napisz skrypt Bashowy, który <strong>uruchomi w tle komendę</strong> podaną jako argument do skryptu, tzn.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./run-background.sh &lt;command-to-run&gt;
+</pre></div>
+</div>
+<p>np.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./run-background.sh &quot;sleep 10&quot;
+$ ./run-background.sh &quot;du -sh /home&quot;
+</pre></div>
+</div>
+<p>W implementacji wykorzystaj polecenie <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>.</p>
+<p>Plik <code class="docutils literal notranslate"><span class="pre">run-background.sh</span></code>, w którym należy zaimplementować ten skrypt znajdziesz w repozytorium do tego laboratorium.</p>
+</div>
+<div class="section" id="zadanie-1-2-1-pkt">
+<h2>Zadanie 1.2 (1 pkt)<a class="headerlink" href="#zadanie-1-2-1-pkt" title="Permalink to this headline">¶</a></h2>
+<p>Napisz skrypt Bashowy, który <strong>wyszuka i zakończy działanie komendy</strong> podanej jako argument do skryptu, tzn.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./kill.sh &lt;command-to-kill&gt;
+</pre></div>
+</div>
+<p>np.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./kill.sh &quot;sleep 10&quot;
+$ ./kill.sh &quot;du -sh /home&quot;
+</pre></div>
+</div>
+<p>W implementacji wykorzystaj jedno lub kilka z następujących poleceń: <code class="docutils literal notranslate"><span class="pre">kill</span></code>, <code class="docutils literal notranslate"><span class="pre">killall</span></code>, <code class="docutils literal notranslate"><span class="pre">pidof</span></code>.</p>
+<p>Plik <code class="docutils literal notranslate"><span class="pre">kill.sh</span></code>, w którym należy zaimplementować ten skrypt znajdziesz w repozytorium do tego laboratorium.</p>
+</div>
+<div class="section" id="zadanie-1-3-1-pkt">
+<h2>Zadanie 1.3 (1 pkt)<a class="headerlink" href="#zadanie-1-3-1-pkt" title="Permalink to this headline">¶</a></h2>
+<p>Napisz skrypt Bashowy, który <strong>będzie filtrować dane pochodzące z losowego strumienia danych</strong>. Wykorzystaj strumień <code class="docutils literal notranslate"><span class="pre">/dev/urandom</span></code> oraz komendy <code class="docutils literal notranslate"><span class="pre">sed</span></code> lub <code class="docutils literal notranslate"><span class="pre">tr</span></code>. Zaimplementuj filtrowanie w taki sposób, aby zwracać tylko znaki alfanumeryczne oraz wybrane 2-3 dodatkowe znaki.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./filter.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="polaczenia-ssh">
+<h2>2. Połączenia SSH<a class="headerlink" href="#polaczenia-ssh" title="Permalink to this headline">¶</a></h2>
+<p>W celu połączenia się ze zdalnym serwerem (maszyną wirtualną) najczęściej wykorzystuje się protokół SSH (ang. <em>secure shell</em>). Podstawowa składnia stosowana do połączenia się z maszyną to:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh &lt;użytkownik&gt;@&lt;adres-maszyny&gt;
+</pre></div>
+</div>
+<p>W przypadku adresu maszyny możemy podać zarówno adres IP maszyny, jak i adres domeny, który wskazuje na IP maszyny.</p>
+<p>Po wykonaniu komendy zostaniemy poproszeni o podanie hasła użytkownika na zdalnym serwerze. Bezpieczniejszą alternatywą jest wykorzystanie kluczy SSH, które możemy wskazać za pomocą argumentu <code class="docutils literal notranslate"><span class="pre">-i</span></code> do komendy <code class="docutils literal notranslate"><span class="pre">ssh</span></code>.</p>
+<p>Wykorzystując protokół ssh możemy nie tylko połączyć się do zdalnej maszyny, ale również kopiować pliki, np. z lokalnej maszyny na zdalny serwer. Wykorzystujemy w tym celu komendę <code class="docutils literal notranslate"><span class="pre">scp</span></code> (ang. <em>secure copy</em>).</p>
+</div>
+<div class="section" id="zadanie-2-1-2-pkt">
+<h2>Zadanie 2.1 (2 pkt)<a class="headerlink" href="#zadanie-2-1-2-pkt" title="Permalink to this headline">¶</a></h2>
+<p>Napisz skrypt Bashowy, który <strong>skopiuje pliki podane jako argumenty skryptu z jednego serwera na drugi</strong>. Powinna być możliwość opcjonalnej zmiany nazwy pliku. Składnia skryptu powinna być następująca:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./copy.sh &lt;użytkownik1@IP-maszyny-źródłowej:/ścieżka/do/plików/&gt; &lt;użytkownik2@IP-maszyny-docelowej:/ścieżka/do/plików&gt; &lt;plik-1&gt;:&lt;nowa-nazwa-pliku-1?&gt; &lt;plik-2&gt;:&lt;nowa-nazwa-pliku-2?&gt; ... &lt;plik-N&gt;:&lt;nowa-nazwa-pliku-N?&gt;
+</pre></div>
+</div>
+<p>Przykładowe wywołanie:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./copy.sh bob@192.168.0.1:/home/bob alice@192.168.0.2:/tmp/ log.txt config.yaml:configuration.yaml
+</pre></div>
+</div>
+<p>Powyższe polecenie skopiuje dwa pliki z maszyny o adresie <code class="docutils literal notranslate"><span class="pre">192.168.0.1</span></code> (logując się jako użytkownik <code class="docutils literal notranslate"><span class="pre">bob</span></code>) z katalogu <code class="docutils literal notranslate"><span class="pre">/home/bob</span></code> na maszynę o adresie <code class="docutils literal notranslate"><span class="pre">192.168.0.2</span></code> (logując się jako użytkownik <code class="docutils literal notranslate"><span class="pre">alice</span></code>) do katalogu <code class="docutils literal notranslate"><span class="pre">/tmp</span></code>. Pierwszy plik - <code class="docutils literal notranslate"><span class="pre">log.txt</span></code> - zostanie skopiowany bez zmian, natomiast w przypadku drugiego pliku - <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> - nazwa pliku powinna zostać zmieniona na <code class="docutils literal notranslate"><span class="pre">configuration.yaml</span></code>.</p>
+<p>Pamiętaj, aby skrypt obsługiwał zmienną liczbę nazw plików, tzn. można skopiować 1 plik, ale również 50.</p>
+</div>
+<div class="section" id="edytory-tekstowe">
+<h2>3. Edytory tekstowe<a class="headerlink" href="#edytory-tekstowe" title="Permalink to this headline">¶</a></h2>
+<p>W trakcie pracy na zdalnym serwerze będziemy często mieli potrzebę edycji zawartości plików tekstowych. Zamiast kopiować te pliki z serwera na lokalny komputer, edytować je lokalnie i następnie zmienione pliki z powrotem umieszczać na serwerze, możemy je edytować bezpośrednio na zdalnej maszynie. Nie będziemy mieć dostępu do aplikacji okienkowych, a jedynie będziemy w stanie wykorzystać edytory tekstowe działające w terminalu.</p>
+<p>Popularnymi edytorami tekstu są: <code class="docutils literal notranslate"><span class="pre">nano</span></code>, <code class="docutils literal notranslate"><span class="pre">vi</span></code> oraz <code class="docutils literal notranslate"><span class="pre">vim</span></code>. O ile <code class="docutils literal notranslate"><span class="pre">nano</span></code> uchodzi za najprostszy edytor, o tyle <code class="docutils literal notranslate"><span class="pre">vim</span></code> oferuje największy komfort pracy. Edytor ten działa w kilku trybach:</p>
+<ul class="simple">
+<li><p>tryb poleceń (ang. <em>normal mode</em>) - włączony domyślnie po uruchomieniu vim’a; pozwala: (a) przechodzić w pozostałe tryby, (b) poruszać się po dokumencie (strzałki lub klawisze h, j, k, l), (c) usuwać, przenosić oraz kopiować tekst,</p></li>
+<li><p>tryb wprowadzania (ang. <em>insert mode</em>) - w ten tryb wchodzimy za pomocą klawisza <code class="docutils literal notranslate"><span class="pre">i</span></code>, a wychodzimy za pomocą <code class="docutils literal notranslate"><span class="pre">Esc</span></code>; w tym trybie możemy normalnie wprowadzać/wpisywać tekst,</p></li>
+<li><p>tryb wizualny (ang. <em>visual mode</em>) - pozwala wybierać fragmenty tekstu i wykonywać na nich polecenia</p></li>
+</ul>
+<p>Istnieją jeszcze dodatkowe tryby (<em>select</em>, <em>command-line</em>, <em>ex-mode</em>) jednak na razie je pominiemy.</p>
+</div>
+<div class="section" id="zadanie-3-1-1-pkt">
+<h2>Zadanie 3.1 (1 pkt)<a class="headerlink" href="#zadanie-3-1-1-pkt" title="Permalink to this headline">¶</a></h2>
+<p>Uruchom edytor <code class="docutils literal notranslate"><span class="pre">vim</span></code> na dowolnum pliku tekstowym, a następnie wykonaj poniższe polecenia:</p>
+<ul class="simple">
+<li><p>znajdź podane wyrażenie w tekście</p></li>
+<li><p>przejdź do podanej linii</p></li>
+<li><p>podmień pojedynczy znak</p></li>
+<li><p>podmień podane wyrażenie na inne</p></li>
+<li><p>zapisz zmiany</p></li>
+<li><p>wyjdź z vim’a (na dwa sposoby)</p></li>
+</ul>
+<p>Zadanie to przećwicz wybierając sobie dowolne wyrażenia, znaki i linie w tekście, przy czym podczas oddawania zadania prowadzący poda własne przykłady.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./labs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="zasady.html" title="previous page">Zasady laboratorium</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomasz Kajdanowicz, Piotr Bielak, Roman Bartusiak, Krzysztof Rajda<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
