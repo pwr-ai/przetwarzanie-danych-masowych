@@ -7,3 +7,6 @@ parts:
         - file: labs/zasady
         - file: labs/lab2
 
+  - caption: Wykłady
+    chapters:
+        - file: lectures/summary
