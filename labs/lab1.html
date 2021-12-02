@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laboratorium 6 &#8212; Przetwarzanie danych masowych</title>
+    <title>Laboratorium 1 &#8212; Przetwarzanie danych masowych</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laboratorium 7" href="lab7.html" />
-    <link rel="prev" title="Laboratorium 5" href="lab5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,67 +87,10 @@
   </a>
  </li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Laboratoria
- </span>
-</p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="zasady.html">
    Zasady laboratorium
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab2.html">
-   Laboratorium 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab3.html">
-   Laboratorium 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab4.html">
-   Laboratorium 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab5.html">
-   Laboratorium 5
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Laboratorium 6
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab7.html">
-   Laboratorium 7
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab8.html">
-   Laboratorium 8
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab9.html">
-   Laboratorium 9
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Wykłady
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../lectures/summary.html">
-   Slajdy z wykładów
   </a>
  </li>
 </ul>
@@ -193,7 +134,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/labs/lab6.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/labs/lab1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -218,7 +159,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/pwr-ai/przetwarzanie-danych-masowych/master?urlpath=tree/docs/labs/lab6.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pwr-ai/przetwarzanie-danych-masowych/master?urlpath=tree/docs/labs/lab1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -235,61 +176,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wykorzystanie-spark-w-trybie-wsadowym">
-   Wykorzystanie Spark w trybie wsadowym
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linki">
-     Linki
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-6-1-4-pkt">
-   Zadanie 6.1 (4 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-6-2-4-pkt">
-   Zadanie 6.2 (4 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-6-3-5-pkt">
-   Zadanie 6.3 (5 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-6-4-2-pkt">
-   Zadanie 6.4 (2 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-6-5-1-pkt">
-   Zadanie 6.5 (1 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-6-6-1-pkt">
-   Zadanie 6.6 (1 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-6-7-2-pkt-zadanie-opcjonalne">
-   Zadanie 6.7 (2 pkt)  -  zadanie opcjonalne
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -298,49 +184,8 @@
         
               <div>
                 
-  <div class="section" id="laboratorium-6">
-<h1>Laboratorium 6<a class="headerlink" href="#laboratorium-6" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="wykorzystanie-spark-w-trybie-wsadowym">
-<h2>Wykorzystanie Spark w trybie wsadowym<a class="headerlink" href="#wykorzystanie-spark-w-trybie-wsadowym" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="linki">
-<h3>Linki<a class="headerlink" href="#linki" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://books.japila.pl/apache-spark-internals/overview/">Apache Spark internals</a></p></li>
-<li><p><a class="reference external" href="https://jaceklaskowski.gitbooks.io/mastering-spark-sql/content/">Mastering Spark SQL</a></p></li>
-<li><p><a class="reference external" href="https://spark.apache.org/docs/latest/quick-start.html">Spark Docs</a></p></li>
-</ul>
-<p>Dokładnie zpoznaj się z repozytorium, znajdziesz tam pytania w postaci komentarzy w plikach źródłowych</p>
-</div>
-</div>
-<div class="section" id="zadanie-6-1-4-pkt">
-<h2>Zadanie 6.1 (4 pkt)<a class="headerlink" href="#zadanie-6-1-4-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Przygotuj środowisko do uruchomienia Sparka z zastosowaniem Dockera. Wykorzystaj multi-stage builds. Pamiętaj o zweryfikowaniu pobranej dystrybucji sparka.</p>
-</div>
-<div class="section" id="zadanie-6-2-4-pkt">
-<h2>Zadanie 6.2 (4 pkt)<a class="headerlink" href="#zadanie-6-2-4-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Stwórz przykładową aplikację Spark, która wygeneruje 10 000 000 losowych liczb double w 10 partycjach. Stwórz na początku listę 10 liczb, z wykorzystaniem sparka dokonaj rozproszenia, zmapuj każdą partycję na odpowiednią liczbę losowych doubli. W jaki sposób zainicjować generator liczb losowych tak aby liczby były losowe oraz mieć pewność że nie trafimy na sytuację gdy dwie partycje mają taki sam seed (sygnatura funkcji mapowania zawiera potrzebny seed), dlaczego należy tak robić?</p>
-</div>
-<div class="section" id="zadanie-6-3-5-pkt">
-<h2>Zadanie 6.3 (5 pkt)<a class="headerlink" href="#zadanie-6-3-5-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Stwórz aplikację spark, która wygeneruje 1 000 000 losowych stringów o losowej długości z zadanego (konfigurowalnego przedziału), następnie zapisz je na dysku. Stwórz kolejną aplikację która wczyta zapisane date oraz policzy liczbe znaków.</p>
-</div>
-<div class="section" id="zadanie-6-4-2-pkt">
-<h2>Zadanie 6.4 (2 pkt)<a class="headerlink" href="#zadanie-6-4-2-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Uruchom zadanie 2 z wykorzystaniem EMR.</p>
-</div>
-<div class="section" id="zadanie-6-5-1-pkt">
-<h2>Zadanie 6.5 (1 pkt)<a class="headerlink" href="#zadanie-6-5-1-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Zapoznaj się ze Spark-UI, dodaj odpowiednie mapowanie portów do docker-compose.yaml tak by uzyskać do niego dostęp. Znajdź stronę na której widać DAG dla zadania 3.</p>
-</div>
-<div class="section" id="zadanie-6-6-1-pkt">
-<h2>Zadanie 6.6 (1 pkt)<a class="headerlink" href="#zadanie-6-6-1-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Dodaj konfigurację która sprawi że nie będziemy widzieć logów o poziomie mniejszym niż warning ze sparka.
-Skonfiguruj SBT aby budowało naszą aplikację jako fat-jar (dlaczego należy to robić? czy trzeba to robić w naszym wypadku? [pomyśl o zależnościach]).</p>
-</div>
-<div class="section" id="zadanie-6-7-2-pkt-zadanie-opcjonalne">
-<h2>Zadanie 6.7 (2 pkt)  -  zadanie opcjonalne<a class="headerlink" href="#zadanie-6-7-2-pkt-zadanie-opcjonalne" title="Permalink to this headline">¶</a></h2>
-<p>Stwórz kolejną aplikację która policzy liczbę słów w zadanym dodatkowym źródle danych. Znajdź dowolne źródło oraz przygotuj skrypt bash który je pobierze oraz umożliwi przetwarzanie za pomocą przygotowanej aplikacji.</p>
-</div>
+  <div class="section" id="laboratorium-1">
+<h1>Laboratorium 1<a class="headerlink" href="#laboratorium-1" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -368,8 +213,6 @@ Skonfiguruj SBT aby budowało naszą aplikację jako fat-jar (dlaczego należy 
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="lab5.html" title="previous page">Laboratorium 5</a>
-    <a class='right-next' id="next-link" href="lab7.html" title="next page">Laboratorium 7</a>
 
         </div>
         
