@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laboratorium 4 &#8212; Przetwarzanie danych masowych</title>
+    <title>Laboratorium 10 &#8212; Przetwarzanie danych masowych</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,12 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laboratorium 5" href="lab5.html" />
-    <link rel="prev" title="Laboratorium 3" href="lab3.html" />
+    <link rel="next" title="Slajdy z wykładów" href="../lectures/summary.html" />
+    <link rel="prev" title="Laboratorium 9" href="lab9.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -112,8 +110,8 @@
    Laboratorium 3
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab4.html">
    Laboratorium 4
   </a>
  </li>
@@ -125,6 +123,26 @@
  <li class="toctree-l1">
   <a class="reference internal" href="lab6.html">
    Laboratorium 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab7.html">
+   Laboratorium 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab8.html">
+   Laboratorium 8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab9.html">
+   Laboratorium 9
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Laboratorium 10
   </a>
  </li>
 </ul>
@@ -180,7 +198,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/labs/lab4.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/labs/lab10.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -205,7 +223,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/pwr-ai/przetwarzanie-danych-masowych/master?urlpath=tree/docs/labs/lab4.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pwr-ai/przetwarzanie-danych-masowych/master?urlpath=tree/docs/labs/lab10.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -228,34 +246,36 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ewaluacja-metod-zrownoleglania-zadan-python-watki-i-procesy">
-   Ewaluacja metod zrównoleglania zadań - Python, wątki i procesy
+  <a class="reference internal nav-link" href="#uczenie-i-wybor-modelu">
+   Uczenie i wybór modelu
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-4-1-1-pkt">
-   Zadanie 4.1. (1 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-4-2-4-pkt">
-   Zadanie 4.2. (4 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-4-3-5-pkt">
-   Zadanie 4.3. (5 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-4-4-1-pkt">
-   Zadanie 4.4. (1 pkt)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zadanie-4-5-1-pkt">
-   Zadanie 4.5 (1 pkt)
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zadanie-10-0-przygotowanie-srodowiska-0-pkt">
+     Zadanie 10.0: przygotowanie środowiska (0 pkt)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zadanie-10-1-przygotowanie-danych-1-pkt">
+     Zadanie 10.1: przygotowanie danych (1 pkt)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zadanie-10-2-ladowanie-i-podzial-danych-2-pkt">
+     Zadanie 10.2: ładowanie i podział danych (2 pkt)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zadanie-10-3-zbuduj-potok-przetwazania-8-pkt-2pkt-za-dodatkowe-atrybuty">
+     Zadanie 10.3: zbuduj potok przetważania (8 pkt + 2pkt[za dodatkowe atrybuty])
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zadanie-10-4-dobor-parametrow-8-pkt">
+     Zadanie 10.4: dobór parametrów (8 pkt)
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -268,59 +288,52 @@
         
               <div>
                 
-  <div class="section" id="laboratorium-4">
-<h1>Laboratorium 4<a class="headerlink" href="#laboratorium-4" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ewaluacja-metod-zrownoleglania-zadan-python-watki-i-procesy">
-<h2>Ewaluacja metod zrównoleglania zadań - Python, wątki i procesy<a class="headerlink" href="#ewaluacja-metod-zrownoleglania-zadan-python-watki-i-procesy" title="Permalink to this headline">¶</a></h2>
-<p>W trakcie trzeciego wykładu wspominaliśmy o tym, że z perspektywy programisty mamy kilka sposobów zrównoleglania obliczeń. Głównie są to <strong>wątki</strong> i <strong>procesy</strong>. Staramy się używać wątków <a class="reference external" href="http://m.in">m.in</a>. ze względu na krótszy czas tworzenia oraz współdzieloną pamięć, której nie mamy bezpośrednio dostępnej w procesach. Tworzenie procesu jest również bardziej czasochłonne, ponieważ wymaga ono większej interakcji z jądrem systemowym oraz utworzenia kopii przestrzeni pamięci.</p>
-<p>Przez wiele lat używanie wątków w Pythonie nie było polecaną metodą ze względu na tzw. <strong>Global Interpreter Lock</strong> (GIL). Implementacja Pythona wymagała, aby w danym momencie tylko jeden wątek na raz miał dostęp do GILa. Takie założenie powoduje, że zrównoleglanie za pomocą wątków było wolniejsze niż za pomocą procesów.</p>
-<p>W trakcie obecnego laboratorium będziemy porównywać czasy działania różnych metod zrównoleglania i przyspieszania obliczeń w języku Python. Zaimplementujemy kilka wersji modelu regresji liniowej.</p>
+  <div class="section" id="laboratorium-10">
+<h1>Laboratorium 10<a class="headerlink" href="#laboratorium-10" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="uczenie-i-wybor-modelu">
+<h2>Uczenie i wybór modelu<a class="headerlink" href="#uczenie-i-wybor-modelu" title="Permalink to this headline">¶</a></h2>
+<p>Dzisiejszym laboratorium kontynuujemy budowanie spójnego potoku masowego przetwarzania danych. Ostatnio zaimplementowaliśmy mechanizm wektoryzacji wraz z możliwością eksploracji danych.</p>
+<p>Dzisiaj zajmiemy się przygotowaniem uczenia oraz wyboru modeli uczenia maszynowego.</p>
+<p>Diagram planowanego systemu wygląda następująco:<br />
+<img alt="image" src="../_images/project_flow_chart_L10.png" /></p>
+<p>Aktualnie będziemy implementować zakres Etapu III</p>
+<div class="section" id="zadanie-10-0-przygotowanie-srodowiska-0-pkt">
+<h3>Zadanie 10.0: przygotowanie środowiska (0 pkt)<a class="headerlink" href="#zadanie-10-0-przygotowanie-srodowiska-0-pkt" title="Permalink to this headline">¶</a></h3>
+<p>Skopiuj potrzebny kod źródłowy z repozytorium zawierającego ostatnie zadanie (Lab 9), będziesz go używać jako bazy pod rozwiązanie poniższych zadań.
+Lista przygotowana jest pod wykonanie za pomocą pySpark (Scala Spark będzie podobna jeżeli chodzi o nazewnictwo klas), listę można zrealizować zarówno w Pythonie jak i JVM (Scala, Java, Kotlin) z wykorzystaniem Sparka bądź Flinka.</p>
 </div>
-<div class="section" id="zadanie-4-1-1-pkt">
-<h2>Zadanie 4.1. (1 pkt)<a class="headerlink" href="#zadanie-4-1-1-pkt" title="Permalink to this headline">¶</a></h2>
-<p>W pliku <code class="docutils literal notranslate"><span class="pre">scripts/generate_data.py</span></code> zaimplementuj funkcję <code class="docutils literal notranslate"><span class="pre">generate_data()</span></code>, która wygeneruje zadaną liczbę <code class="docutils literal notranslate"><span class="pre">num_samples</span></code> próbek danych. Każda próbka <span class="math notranslate nohighlight">\((x_i, y_i)\)</span> powinna być opisana przez dwie liczby rzeczywiste, które są ze sobą związane poprzez wybraną funkcję liniową, np. <span class="math notranslate nohighlight">\(y_i = 2x_i + 5\)</span> (lub inną klasę funkcji, którą dopasować za pomocą regresji liniowej).</p>
-<p>Następnie zaimplementuj funkcję <code class="docutils literal notranslate"><span class="pre">main()</span></code> w taki sposób, aby wywołanie skryptu:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3 scripts/generate_data.py --num-samples &lt;num-samples&gt; --out-dir &lt;/path/to/datasets/&gt;
-</pre></div>
+<div class="section" id="zadanie-10-1-przygotowanie-danych-1-pkt">
+<h3>Zadanie 10.1: przygotowanie danych (1 pkt)<a class="headerlink" href="#zadanie-10-1-przygotowanie-danych-1-pkt" title="Permalink to this headline">¶</a></h3>
+<p>Przygotuj kod który pobierze dane z twojej bazy a następnie zapisze jes w formacie CSV (bądź innym który będziesz w stanie wczytać w kolejnych krokach)</p>
 </div>
-<p>wygenerowało zbiór danych składający się z <code class="docutils literal notranslate"><span class="pre">&lt;num-samples&gt;</span></code> instancji i zapisało w katalogu <code class="docutils literal notranslate"><span class="pre">&lt;/path/to/datasets/&gt;</span></code> plik o nazwie <code class="docutils literal notranslate"><span class="pre">&lt;num-samples&gt;.pkl</span></code> (bądź innym rozszerzeniu).</p>
-</div>
-<div class="section" id="zadanie-4-2-4-pkt">
-<h2>Zadanie 4.2. (4 pkt)<a class="headerlink" href="#zadanie-4-2-4-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Zaimplementuj model regresji liniowej na 4 sposoby:</p>
+<div class="section" id="zadanie-10-2-ladowanie-i-podzial-danych-2-pkt">
+<h3>Zadanie 10.2: ładowanie i podział danych (2 pkt)<a class="headerlink" href="#zadanie-10-2-ladowanie-i-podzial-danych-2-pkt" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://sparkbyexamples.com/pyspark/pyspark-read-csv-file-into-dataframe/">Wczytaj dane</a> za pomocą pySpark oraz dokonaj ich <a class="reference external" href="https://spark.apache.org/docs/3.1.1/api/python/reference/api/pyspark.sql.DataFrame.randomSplit.html">podziału</a></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">lr/lr_seq.py</span></code> - implementacja wykorzystująca sekwencyjne obliczenia (bez używania zewnętrznych bibliotek (typu NumPy, SciPy); kod ten będzie używany jako metoda referencyjna,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lr/lr_np.py</span></code> - implementacja obliczająca współczynniki regresji liniowej za pomocą biblioteki NumPy,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lr/lr_thread.py</span></code> - implementacja dzieląca dane na mniejsze paczki (ang. <em>batch</em>), obliczająca równolegle (za pomocą wątków) pośrednie wartości i agregująca je do końcowego wyliczenia współczynników regresji,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lr/lr_proc.py</span></code> - implementacja jak w przypadku <code class="docutils literal notranslate"><span class="pre">lr/lr_thread.py</span></code>, ale wykorzystująca procesy zamiast wątków.</p></li>
+<li><p>pySparka wykorzystujemy w trybie local, zadbaj o odpowiednią konfigurację</p></li>
 </ul>
 </div>
-<div class="section" id="zadanie-4-3-5-pkt">
-<h2>Zadanie 4.3. (5 pkt)<a class="headerlink" href="#zadanie-4-3-5-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Uzupełnij implementację skryptu <code class="docutils literal notranslate"><span class="pre">scripts/run_experiments.py</span></code>:</p>
+<div class="section" id="zadanie-10-3-zbuduj-potok-przetwazania-8-pkt-2pkt-za-dodatkowe-atrybuty">
+<h3>Zadanie 10.3: zbuduj potok przetważania (8 pkt + 2pkt[za dodatkowe atrybuty])<a class="headerlink" href="#zadanie-10-3-zbuduj-potok-przetwazania-8-pkt-2pkt-za-dodatkowe-atrybuty" title="Permalink to this headline">¶</a></h3>
+<p>Zbuduj <a class="reference external" href="https://spark.apache.org/docs/latest/ml-pipeline.html#example-pipeline">potok przetwarzania</a> który odpowiedni zmodyfikuje twój DataFrame do postaci akceptowanej przez pySpark ML, oraz nauczy model. Umożliwij predykcję dla dowolnego tekstu oraz przeprowadź predykcję na danych testowych. Dokonaj ewaluacji w oparciu o dane testowe. Wykorzystaj <a class="reference external" href="https://spark.apache.org/docs/latest/mllib-evaluation-metrics.html#ranking-systems">miary ewaluacji</a> dla modeli regresji</p>
 <ul class="simple">
-<li><p>wczytaj zbiory danych z katalogu podanego w wywołaniu skryptu,</p></li>
-<li><p>uruchom każdą z zaimplementowanych wersji regresji liniowej na każdym ze zbiorów danych, pamiętając o odpowiednim sposobie pomiaru czasu oraz kilkukrotnym powtórzeniu pomiarów</p></li>
-<li><p>zbierz wyniki i zapisz je w pliku JSON (<code class="docutils literal notranslate"><span class="pre">data/time_measurements.json</span></code>)</p></li>
-<li><p>wygeneruj wykres pozwalający porównać szybkość działania każdej metody (<code class="docutils literal notranslate"><span class="pre">data/comparison.png</span></code>)</p></li>
-<li><p>wygeneruj wykres zależności liczby wątków / procesów a czasu działania skryptu (<code class="docutils literal notranslate"><span class="pre">data/scaling.png</span></code>)</p></li>
+<li><p>dane musimy sprowadzić do postaci tabeli o kolumnach “features” i “label”</p></li>
+<li><p>na podstawie cech chcemy przewidywać ilość plusów</p></li>
+<li><p>wykorzystujemy LinearRegression</p></li>
+<li><p>możemy wprost wykorzystać zwektoryzowany tekst</p></li>
+<li><p>możemy zwektoryzować dodatkowe cechy za pomocą odpowiednich narzędzi [<a class="reference external" href="https://spark.apache.org/docs/latest/ml-features.html#featurehasher">1</a>, <a class="reference external" href="https://spark.apache.org/docs/latest/ml-features.html#onehotencoder">2</a>, <a class="reference external" href="https://spark.apache.org/docs/latest/ml-features.html#stringindexer">3</a>] (dodatkowe punkty za dodatkowe atrybuty)</p></li>
+<li><p>dodatkowo możemy <a class="reference external" href="https://spark.apache.org/docs/latest/ml-features.html#vectorassembler">rozbudować</a> zwektroryzowany tekst o dodatkowe zwektoryzowane cechy</p></li>
 </ul>
 </div>
-<div class="section" id="zadanie-4-4-1-pkt">
-<h2>Zadanie 4.4. (1 pkt)<a class="headerlink" href="#zadanie-4-4-1-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Napisz skrypt Bashowy (<code class="docutils literal notranslate"><span class="pre">run_all.sh</span></code>), który:</p>
+<div class="section" id="zadanie-10-4-dobor-parametrow-8-pkt">
+<h3>Zadanie 10.4: dobór parametrów (8 pkt)<a class="headerlink" href="#zadanie-10-4-dobor-parametrow-8-pkt" title="Permalink to this headline">¶</a></h3>
+<p>Stwórz kolejny potok przetwarząnia który dobierze parametry modelu regresji za pomocą podziału na <a class="reference external" href="https://spark.apache.org/docs/latest/ml-tuning.html#train-validation-split">zbiór uczący i walidacyjny</a></p>
 <ul class="simple">
-<li><p>wygeneruje kilka zbiorów danych o różnej liczbie instancji</p></li>
-<li><p>uruchomi eksperymenty</p></li>
+<li><p>piepline może być traktowany jako estymator, przez co może być przekazany do <code class="docutils literal notranslate"><span class="pre">TrainValidationSplit</span></code></p></li>
+<li><p>dokonaj ewaluacji najlepszego modelu na danych testowych</p></li>
+<li><p>dokonaj ewaluacji modelu na danych wprowadzanych “z palca” (tekst jako zmienna w kodzie)</p></li>
 </ul>
 </div>
-<div class="section" id="zadanie-4-5-1-pkt">
-<h2>Zadanie 4.5 (1 pkt)<a class="headerlink" href="#zadanie-4-5-1-pkt" title="Permalink to this headline">¶</a></h2>
-<p>Zapewnij, że zaimplementowany kod spełnia podstawowe warunki pod względem:</p>
-<ul class="simple">
-<li><p>jakości kodu <code class="docutils literal notranslate"><span class="pre">tox</span> <span class="pre">-e</span> <span class="pre">pep8</span></code></p></li>
-<li><p>testów jednostkowych dot. modeli regresji liniowej <code class="docutils literal notranslate"><span class="pre">tox</span> <span class="pre">-e</span> <span class="pre">unit</span></code></p></li>
-</ul>
 </div>
 </div>
 
@@ -349,8 +362,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="lab3.html" title="previous page">Laboratorium 3</a>
-    <a class='right-next' id="next-link" href="lab5.html" title="next page">Laboratorium 5</a>
+    <a class='left-prev' id="prev-link" href="lab9.html" title="previous page">Laboratorium 9</a>
+    <a class='right-next' id="next-link" href="../lectures/summary.html" title="next page">Slajdy z wykładów</a>
 
         </div>
         
