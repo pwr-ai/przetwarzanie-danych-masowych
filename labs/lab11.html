@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorium 11 &#8212; Przetwarzanie danych masowych</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Laboratorium 12" href="lab12.html" />
+    <link rel="prev" title="Laboratorium 10" href="lab10.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Przetwarzanie danych masowych</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Przetwarzanie danych masowych
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Laboratoria
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="zasady.html">
+   Zasady laboratorium
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab2.html">
+   Laboratorium 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab3.html">
+   Laboratorium 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab4.html">
+   Laboratorium 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab5.html">
+   Laboratorium 5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab6.html">
+   Laboratorium 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab7.html">
+   Laboratorium 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab8.html">
+   Laboratorium 8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab9.html">
+   Laboratorium 9
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab10.html">
+   Laboratorium 10
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Laboratorium 11
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab12.html">
+   Laboratorium 12
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Wykłady
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/summary.html">
+   Slajdy z wykładów
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/labs/lab11.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pwr-ai/przetwarzanie-danych-masowych/master?urlpath=tree/docs/labs/lab11.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wykorzystanie-rozwiazania-kubernetes-w-przetwarzaniu-danych-masowych-k3d">
+   Wykorzystanie rozwiązania Kubernetes w przetwarzaniu danych masowych - K3d
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kubernetes">
+     Kubernetes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zadanie-11-1-instalacja-klastra-k3s-4-pkt">
+     Zadanie 11.1: instalacja klastra K3s (4 pkt)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zadanie-11-2-obiekty-kubernetesowe-5-pkt">
+     Zadanie 11.2: Obiekty Kubernetesowe (5 pkt)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zadanie-11-3-helm-5-pkt">
+     Zadanie 11.3: Helm (5 pkt)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="laboratorium-11">
+<h1>Laboratorium 11<a class="headerlink" href="#laboratorium-11" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="wykorzystanie-rozwiazania-kubernetes-w-przetwarzaniu-danych-masowych-k3d">
+<h2>Wykorzystanie rozwiązania Kubernetes w przetwarzaniu danych masowych - K3d<a class="headerlink" href="#wykorzystanie-rozwiazania-kubernetes-w-przetwarzaniu-danych-masowych-k3d" title="Permalink to this headline">¶</a></h2>
+<p>Przypomnijmy diagram planowanego systemu::
+<img alt="image" src="../_images/project_flow_chart_L10.png" /></p>
+<p>W trakcie obecnego laboratorium rozpoczniemy przygotowania do Etapu IV.</p>
+<p>Zapoznamy się dzisiaj z platformą Kubernetes oraz narzędziem Helm i zobaczymy w jaki sposób uruchamiać na Kubernetesie aplikacje.</p>
+<div class="section" id="kubernetes">
+<h3>Kubernetes<a class="headerlink" href="#kubernetes" title="Permalink to this headline">¶</a></h3>
+<p>Jest to platforma do zarządzania zasobami obliczeniowymi, utworzona przez Google’a. Kubernetes (K8s) zarządza kontenerami (np. Dockerowymi), przy czym najmniejszą jednostką operacyjną w K8s jest tzw. <strong>pod</strong>. Pod może składać się z wielu kontenerów i wolumenów dyskowych, jednak wybór liczby składowych poda jest zależny od konkretnego zastosowania. Najczęściej przyjmuje się, że jeden pod zawiera jedną aplikację - np. jeśli dana usługa zawsze wymaga własnej kopii innej usługi (np. narzędzia monitorującego) to warto te dwie usługi umieścić w jednym podzie. W naszych rozważaniach będziemy jednak przyjmować, że w jednym podzie zawsze będzie działać tylko jeden kontener oraz opcjonalnie jeden lub wiele wolumenów danych.</p>
+<p>Pod względem architektury klaster Kubernetesowy składa się z węzłów typu:</p>
+<ul class="simple">
+<li><p><strong>master</strong> - odpowiedzialne za zarządzanie klastrem, przyjmowanie nowych żądań od użytkownika, kontrolę uruchomionych podów itd.; w klastrze może działać wiele węzłów typu master, ale na nasze potrzeby wystarczy nam dokładnie jeden taki węzeł,</p></li>
+<li><p><strong>worker</strong> - węzły, na których uruchamiają się właściwe zadania (pody); zazwyczaj klastry Kubernetesowe posiadają wiele (dziesiątki, setki) węzłów typu worker, ale w naszym przypadku uruchomimy tylko dwie instancje.</p></li>
+</ul>
+</div>
+<div class="section" id="zadanie-11-1-instalacja-klastra-k3s-4-pkt">
+<h3>Zadanie 11.1: instalacja klastra K3s (4 pkt)<a class="headerlink" href="#zadanie-11-1-instalacja-klastra-k3s-4-pkt" title="Permalink to this headline">¶</a></h3>
+<p>K3s jest uproszczoną wersją Kubernetesa, która jest znacząco łatwiejsza w instalacji. Wśród zasadnicznych zmian znajdziemy użycie bazy danych SQLite zamiast ETCD oraz ogranicznie funkcjonalności do minimum. W celu lokalnego uruchomienia bazowego klastra Kubernetesowego wykorzystamy jednak narzędzie K3d, które pozwala uruchomić Kubernetesa wewnątrz kontenerów Dockerowych.</p>
+<p>a) Przeczytaj wprowadzenie do narzędzia K3d - <a class="reference external" href="https://github.com/rancher/k3d">link</a></p>
+<p>b) Upewnij się, że masz zainstalowanego Dockera w systemie.</p>
+<p>c) Zainstaluj narzędzie <code class="docutils literal notranslate"><span class="pre">k3d</span></code> (sposób instalacji zależy od konkretnego systemu operacyjnego).</p>
+<p>d) Uruchom klaster składający się z jednego węzła typu master oraz co najmniej dwóch węzłów typu worker (zobacz <a class="reference external" href="https://github.com/rancher/k3d#usage">link</a>): <code class="docutils literal notranslate"><span class="pre">k3d</span> <span class="pre">cluster</span> <span class="pre">create</span> <span class="pre">&lt;NAZWA_KLASTRA&gt;</span> <span class="pre">--agents</span> <span class="pre">2</span></code></p>
+<p>e) Sprawdź, że zawartość pliku <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code> wskazuje na nowo utworzony klaster.</p>
+<p>f) Zainstaluj narzędzie <code class="docutils literal notranslate"><span class="pre">kubectl</span></code> (sposób instalacji zależy od konkretnego systemu operacyjnego) i sprawdź czy możesz się połączyć z utworzonym klastrem.</p>
+</div>
+<div class="section" id="zadanie-11-2-obiekty-kubernetesowe-5-pkt">
+<h3>Zadanie 11.2: Obiekty Kubernetesowe (5 pkt)<a class="headerlink" href="#zadanie-11-2-obiekty-kubernetesowe-5-pkt" title="Permalink to this headline">¶</a></h3>
+<p>Wykorzystaj załączone w repozytorium (katalog: <code class="docutils literal notranslate"><span class="pre">plain_manifests</span></code>) manifesty Kubernetesowe:</p>
+<ul class="simple">
+<li><p>zainstaluj obiekty opisane przez manifesty w klastrze</p></li>
+<li><p>sprawdź czy wszystko zostało poprawnie zainstalowane</p></li>
+<li><p>wyjaśnij co każdy tych manifestów robi</p></li>
+<li><p>usuń (odinstaluj) uruchomione obiekty z klastra</p></li>
+</ul>
+</div>
+<div class="section" id="zadanie-11-3-helm-5-pkt">
+<h3>Zadanie 11.3: Helm (5 pkt)<a class="headerlink" href="#zadanie-11-3-helm-5-pkt" title="Permalink to this headline">¶</a></h3>
+<p>Helm (<a class="reference external" href="https://helm.sh/docs/">dokumentacja</a>) pozwala zautomatyzować proces uruchamiania aplikacji w klastrze Kubernetesowym (więcej o tym narzędziu na kolejnym wykładzie). Jest to menadżer paczek dla Kubernetesa – dostarcza wiele gotowych paczek dla typowych aplikacji (np. MongoDB, Redash), ale można również zdefiniować własne tzw. <strong>charty</strong> Helmowe dla naszych aplikacji.</p>
+<p>Możemy zauważyć, że w manifestach K8s’owych wszystkie wartości (w tym nazwy) obiektów są zapisane na stałe. Jeśli byśmy chcieli uruchomić identyczny obiekt dla innej aplikacji w klastrze, musielibyśmy ręcznie zmienić jego nazwę, co w perspektywie bardziej złożonych aplikacji jest trudne i czasochłonne. Helm dostarcza silnik szablonów, który pozwala zamienić na stałe zapisane wartości w manifestach na szablony (ang. <em>template</em>), które są uzupełniane przez Helma w trakcie instalacji danego obiektu (zobacz poniżej).</p>
+<p>Dodatkowo Helm wspiera i automatyzuje proces wdrażania, poprzez <a class="reference external" href="http://m.in">m.in</a>. rolling updates oraz przywracanie zmian (<em>rollback</em>).</p>
+<p>a) Zainstaluj narzędzie Helm CLI</p>
+<p>b) Wykorzystaj załączony w repozytorium (katalog: <code class="docutils literal notranslate"><span class="pre">helm</span></code>) przykładowy chart Helmowy:</p>
+<ul class="simple">
+<li><p>zainstaluj go w klastrze</p></li>
+<li><p>sprawdź czy aplikacja działa i czy wszystkie obiekty zostały poprawnie zainstalowane,</p></li>
+<li><p>usuń chart z klastra</p></li>
+</ul>
+<p>c) Wyjaśnij w jaki sposób wartości zapisane w pliku <code class="docutils literal notranslate"><span class="pre">values.yaml</span></code> są używane wewnątrz manifestów</p>
+<p>d) W jaki sposób wykorzystać gotowe paczki (charty) Helmowe?</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./labs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="lab10.html" title="previous page">Laboratorium 10</a>
+    <a class='right-next' id="next-link" href="lab12.html" title="next page">Laboratorium 12</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomasz Kajdanowicz, Piotr Bielak, Roman Bartusiak, Krzysztof Rajda<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
