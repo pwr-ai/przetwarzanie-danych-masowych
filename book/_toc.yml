@@ -16,6 +16,7 @@ parts:
         - file: labs/lab10
         - file: labs/lab11
         - file: labs/lab12
+        - file: labs/lab13
 
   - caption: Wykłady
     chapters:
