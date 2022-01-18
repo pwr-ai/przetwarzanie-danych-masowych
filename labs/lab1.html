@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laboratorium 8 &#8212; Przetwarzanie danych masowych</title>
+    <title>Laboratorium 1 &#8212; Przetwarzanie danych masowych</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laboratorium 9" href="lab9.html" />
-    <link rel="prev" title="Laboratorium 7" href="lab7.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,67 +87,10 @@
   </a>
  </li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Laboratoria
- </span>
-</p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="zasady.html">
    Zasady laboratorium
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab2.html">
-   Laboratorium 2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab3.html">
-   Laboratorium 3
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab4.html">
-   Laboratorium 4
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab5.html">
-   Laboratorium 5
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab6.html">
-   Laboratorium 6
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab7.html">
-   Laboratorium 7
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Laboratorium 8
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lab9.html">
-   Laboratorium 9
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Wykłady
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../lectures/summary.html">
-   Slajdy z wykładów
   </a>
  </li>
 </ul>
@@ -193,7 +134,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/labs/lab8.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/labs/lab1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -218,7 +159,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/pwr-ai/przetwarzanie-danych-masowych/master?urlpath=tree/docs/labs/lab8.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pwr-ai/przetwarzanie-danych-masowych/master?urlpath=tree/docs/labs/lab1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -235,36 +176,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementacja-rozproszonego-mechanizmu-pozyskiwania-danych">
-   Implementacja rozproszonego mechanizmu pozyskiwania danych
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zadanie-8-1-pozyskiwanie-danych-5-pkt">
-     Zadanie 8.1: pozyskiwanie danych (5 pkt)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zadanie-8-2-ciaglosc-procesu-2-pkt">
-     Zadanie 8.2: ciągłość procesu (2 pkt)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zadanie-8-3-monitoring-5-pkt">
-     Zadanie 8.3: monitoring (5 pkt)
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -273,55 +184,8 @@
         
               <div>
                 
-  <div class="section" id="laboratorium-8">
-<h1>Laboratorium 8<a class="headerlink" href="#laboratorium-8" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="implementacja-rozproszonego-mechanizmu-pozyskiwania-danych">
-<h2>Implementacja rozproszonego mechanizmu pozyskiwania danych<a class="headerlink" href="#implementacja-rozproszonego-mechanizmu-pozyskiwania-danych" title="Permalink to this headline">¶</a></h2>
-<p>Niniejszym laboratorium rozpoczynamy część zajęć poświęconą budowaniu spójnego potoku masowego przetwarzania danych. Na kolejnych zajęciach będziemy rozbudowywali stworzony dziś moduł i dokładali do niego kolejne elementy.</p>
-<p>Diagram planowanego systemu wygląda następująco:<br />
-<img alt="image" src="../_images/project_flow_chart_L8.png" /></p>
-<p>Aktualnie będziemy implementować zakres Etapu I</p>
-<div class="section" id="zadanie-8-1-pozyskiwanie-danych-5-pkt">
-<h3>Zadanie 8.1: pozyskiwanie danych (5 pkt)<a class="headerlink" href="#zadanie-8-1-pozyskiwanie-danych-5-pkt" title="Permalink to this headline">¶</a></h3>
-<p>Używając zdobytej dotychczas wiedzy, stwórz task Celery, którego zadaniem będzie pobieranie aktualnych wpisów z mikrobloga serwisu <a class="reference external" href="http://Wykop.pl">Wykop.pl</a></p>
-<p>Możesz:<br />
-a) uzyskać dostęp do API: <a class="reference external" href="https://www.wykop.pl/dla-programistow/apiv2/">dokumentacja</a><br />
-b) stworzyć mechanizm scrapowania</p>
-<p>Pozyskaj dane z <a class="reference external" href="https://www.wykop.pl/mikroblog/aktywne/">najnowszych wpisów</a> lub wpisów dotyczących <a class="reference external" href="https://www.wykop.pl/tag/wpisy/wroclaw/">konkretnego tagu</a> - wybór tagu wedle uznania</p>
-<p>Pozyskaj dane w formie pojedynczych wpisów. Zadbaj o zebranie:</p>
-<ul class="simple">
-<li><p>treści wpisu</p></li>
-<li><p>daty utworzenia</p></li>
-<li><p>nazwy autora wpisu</p></li>
-<li><p>liczby plusów</p></li>
-<li><p>liczby odpowiedzi</p></li>
-</ul>
-</div>
-<div class="section" id="zadanie-8-2-ciaglosc-procesu-2-pkt">
-<h3>Zadanie 8.2: ciągłość procesu (2 pkt)<a class="headerlink" href="#zadanie-8-2-ciaglosc-procesu-2-pkt" title="Permalink to this headline">¶</a></h3>
-<p>Zadbaj o ciągłość pobierania danych:</p>
-<ul class="simple">
-<li><p>ustal odpowiedni interwał pojawiania się nowych danych</p></li>
-<li><p>użyj mechanizmu <a class="reference external" href="https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html">celery-beat</a> by stworzyć mechanizm harmonogramowania tasków, który umożliwi pobieranie nowych wpisów</p></li>
-</ul>
-</div>
-<div class="section" id="zadanie-8-3-monitoring-5-pkt">
-<h3>Zadanie 8.3: monitoring (5 pkt)<a class="headerlink" href="#zadanie-8-3-monitoring-5-pkt" title="Permalink to this headline">¶</a></h3>
-<p>Dodaj możliwość monitorowania procesu pobierania danych:</p>
-<ul class="simple">
-<li><p>dodaj do docker-compose instancję bazy danych, np. <a class="reference external" href="https://prometheus.io/">Prometheus</a> lub <a class="reference external" href="https://www.influxdata.com/">InfluxDB</a></p></li>
-<li><p>dodaj do docker-compose instancję <a class="reference external" href="https://grafana.com/grafana/download?pg=get&amp;plcmt=selfmanaged-box1-cta1&amp;platform=docker">Grafany</a> (<a class="reference external" href="https://pwr-ai.github.io/przetwarzanie-danych-i-odkrywanie-wiedzy/laboratoria/lab6-produktyzacja.html#grafana-ladniejsze-wykresy-wiecej-mozliwosci">materiały z PDIOW</a>)</p></li>
-<li><p>alternatywnie do w/w, możesz użyć <a class="reference external" href="https://grafana.com/get/?plcmt=top-nav&amp;cta=downloads">wersji chmurowej Grafany</a></p></li>
-<li><p>zadbaj o zbieranie statystyk ze skryptu pobierającego dane. Przykłady zapisu danych w <a class="reference external" href="https://github.com/prometheus/client_python#exporting-to-a-pushgateway">Prometheusie</a> i <a class="reference external" href="https://docs.influxdata.com/influxdb/v2.1/api-guide/client-libraries/python/">Influxie</a></p></li>
-<li><p>stwórz odpowiednie dashboardy ilustrujące proces zbierania danych. Stwórz <em>co najmniej</em> wykresy:</p></li>
-</ul>
-<ul class="simple">
-<li><p>średniego czasu pobierania danych</p></li>
-<li><p>ilości pobranych danych w czasie</p></li>
-<li><p>histogram liczby plusów i odpowiedzi</p></li>
-</ul>
-</div>
-</div>
+  <div class="section" id="laboratorium-1">
+<h1>Laboratorium 1<a class="headerlink" href="#laboratorium-1" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -349,8 +213,6 @@ b) stworzyć mechanizm scrapowania</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="lab7.html" title="previous page">Laboratorium 7</a>
-    <a class='right-next' id="next-link" href="lab9.html" title="next page">Laboratorium 9</a>
 
         </div>
         
